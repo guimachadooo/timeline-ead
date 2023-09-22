@@ -1,46 +1,37 @@
-
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fullscreen 3D Carousel With JavaScript Example</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-    <link rel="stylesheet" href="node_modules/mdbootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="node_modules/mdbootstrap/css/mdb.min.css">
-    <link rel="stylesheet" href="node_modules/mdbootstrap/css/style.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="JiSlider.css">
+    <title>Timeline EAD</title>
   </head>
   
   <body>
-    <div class="container">
-      <div class="carousel-3d carousel-3d-controls">
-        <div class="carousel-3d-inner">
-          <div class="carousel-3d-item"><img src="https://mdbootstrap.com/img/Photos/Slides/img%20(46).webp" alt="Slide"></div>
-          <div class="carousel-3d-item"><img src="https://mdbootstrap.com/img/Photos/Slides/img%20(45).webp" alt="Slide"></div>
-          <div class="carousel-3d-item"><img src="https://mdbootstrap.com/img/Photos/Slides/img%20(47).webp" alt="Slide"></div>
-          <div class="carousel-3d-item"><img src="https://mdbootstrap.com/img/Photos/Slides/img%20(48).webp" alt="Slide"></div>
-          <div class="carousel-3d-item"><img src="https://mdbootstrap.com/img/Photos/Slides/img%20(49).webp" alt="Slide"></div>
-          <div class="carousel-3d-item"><img src="https://mdbootstrap.com/img/Photos/Slides/img%20(50).webp" alt="Slide"></div>
-          <div class="carousel-3d-item"><img src="https://mdbootstrap.com/img/Photos/Slides/img%20(51).webp" alt="Slide"></div>
-          <div class="carousel-3d-item"><img src="https://mdbootstrap.com/img/Photos/Slides/img%20(52).webp" alt="Slide"></div>
-          <div class="carousel-3d-item"><img src="https://mdbootstrap.com/img/Photos/Slides/img%20(53).webp" alt="Slide"></div>
-        </div>
-        <div class="carousel-3d-controls">
-          <a class="prev-btn waves-effect waves-light"><i class="fas fa-chevron-left"></i></a>
-          <a class="next-btn waves-effect waves-light"><i class="fas fa-chevron-right"></i></a>
-        </div>
-      </div>
+    <div id="JiSlider" class="jislider">
+      <ul>
+        <li>
+          <img src="https://i.imgur.com/hJQ9zFk.png">
+        </li>
+        <li>
+          <img src="https://i.imgur.com/SoM3hFI.png">
+        </li>
+        <li>
+          <img src="https://i.imgur.com/t9T6JaX.png">
+        </li>
+        <li>
+          <img src="https://i.imgur.com/pHSc7Vc.png">
+        </li>
+      </ul>
     </div>
 
-    <script type="text/javascript" src="node_modules/mdbootstrap/js/jquery.min.js"></script>
-    <script type="text/javascript" src="node_modules/mdbootstrap/js/popper.min.js"></script>
-    <script type="text/javascript" src="node_modules/mdbootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="node_modules/mdbootstrap/js/mdb.min.js"></script>
-
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="JiSlider.js"></script>
     <script>
-      $('.carousel-3d-controls').mdbCarousel3d();
-    </script>
+			$(window).load(function () {
+				$('#JiSlider').JiSlider({color: '#fff', start: 1, reverse: false}).addClass('ff')
+			})
+		</script>
   </body>
 </html>

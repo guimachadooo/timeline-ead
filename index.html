@@ -10,33 +10,31 @@
   
   <body>
     <div id="JiSlider" class="jislider">
-      <ul>
-        <li>
-          <img src="https://i.imgur.com/hJQ9zFk.png">
-        </li>
-        <li>
-          <img src="https://i.imgur.com/SoM3hFI.png">
-        </li>
-        <li>
-          <img src="https://i.imgur.com/t9T6JaX.png">
-        </li>
-        <li>
-          <img src="https://i.imgur.com/BhNeES9.png">
-        </li>
-        <li>
-          <img src="https://i.imgur.com/kmsevMQ.png">
-        </li>
-        <li>
-          <img src="https://i.imgur.com/PW4jgPw.png">
-        </li>
-      </ul>
+      <ul></ul>
     </div>
 
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="JiSlider.js"></script>
     <script>
 			$(window).load(function () {
-				$('#JiSlider').JiSlider({color: '#fff', start: 1, reverse: false}).addClass('ff')
+        let images = [
+          "https://i.imgur.com/hJQ9zFk.png",
+          "https://i.imgur.com/wsa5GZV.png",
+          "https://i.imgur.com/CbEUoUm.png",
+          "https://i.imgur.com/0NSGjpr.png",
+          "https://i.imgur.com/M1Ru5Iv.png",
+          "https://i.imgur.com/NL0Q7CG.png",
+          "https://i.imgur.com/fH8onyT.png",
+          "https://i.imgur.com/wKFBt13.png",
+          "https://i.imgur.com/RQmZjBn.png",
+          "https://i.imgur.com/hRVUtsh.png",
+        ];
+
+        jQuery.each(images, function(i){
+          $('.jislider ul').append('<li><img src='+ images[i] + '/></li>');
+        });
+        
+				$('#JiSlider').JiSlider({color: '#fff', start: 1, reverse: false}).addClass('ff');
 			})
 		</script>
   </body>

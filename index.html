@@ -13,33 +13,44 @@
       <ul></ul>
     </div>
 
+    <div id="mySpinner"></div>
+
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="JiSlider.js"></script>
     <script>
+      let images = [
+        "https://i.imgur.com/hJQ9zFk.png",
+        "https://i.imgur.com/wsa5GZV.png",
+        "https://i.imgur.com/CbEUoUm.png",
+        "https://i.imgur.com/0NSGjpr.png",
+        "https://i.imgur.com/M1Ru5Iv.png",
+        "https://i.imgur.com/NL0Q7CG.png",
+        "https://i.imgur.com/fH8onyT.png",
+        "https://i.imgur.com/wKFBt13.png",
+        "https://i.imgur.com/RQmZjBn.png",
+        "https://i.imgur.com/hRVUtsh.png",
+        "https://i.imgur.com/nb0ar3g.png",
+        "https://i.imgur.com/oLCH7U4.png",
+        "https://i.imgur.com/g96jyy3.png",
+        "https://i.imgur.com/aAIvAiN.png",
+        "https://i.imgur.com/hArwsJy.png",
+      ];
+
+      $('#mySpinner').addClass('spinner');
+
 			$(window).load(function () {
-        let images = [
-          "https://i.imgur.com/hJQ9zFk.png",
-          "https://i.imgur.com/wsa5GZV.png",
-          "https://i.imgur.com/CbEUoUm.png",
-          "https://i.imgur.com/0NSGjpr.png",
-          "https://i.imgur.com/M1Ru5Iv.png",
-          "https://i.imgur.com/NL0Q7CG.png",
-          "https://i.imgur.com/fH8onyT.png",
-          "https://i.imgur.com/wKFBt13.png",
-          "https://i.imgur.com/RQmZjBn.png",
-          "https://i.imgur.com/hRVUtsh.png",
-          "https://i.imgur.com/nb0ar3g.png",
-          "https://i.imgur.com/oLCH7U4.png",
-          "https://i.imgur.com/g96jyy3.png",
-          "https://i.imgur.com/aAIvAiN.png",
-          "https://i.imgur.com/hArwsJy.png",
-        ];
+        setTimeout(function(){
+          $('#mySpinner').remove();
+        },1000)
 
         jQuery.each(images, function(i){
           $('.jislider ul').append('<li><img src='+ images[i] + '/></li>');
         });
         
-				$('#JiSlider').JiSlider({color: '#fff', start: 1, reverse: false}).addClass('ff');
+				$('#JiSlider')
+        .addClass('ff')
+        .fadeIn("slow")
+        .JiSlider({color: '#fff', start: 1, reverse: false})
 			})
 		</script>
   </body>

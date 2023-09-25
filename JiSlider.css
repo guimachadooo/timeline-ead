@@ -1,3 +1,33 @@
+#mySpinner{
+  width:100%;
+  height:100%;
+  position:fixed;
+  z-index:999;
+  left:0;
+  top:0;
+  background: linear-gradient(to left, #1d212d, #333);
+}
+
+@keyframes spinner {
+from {transform:rotate(0deg);}
+to {transform: rotate(360deg);}
+}
+.spinner:before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  width: 150px;
+  height: 150px;
+  margin-top: -15px;
+  margin-left: -15px;
+  border-radius: 50%;
+  border: 10px solid #acef35;
+  border-top-color: #333;
+  animation: spinner .6s linear infinite;
+}
+
 /****** JiSlider css ******/
 * {
   margin: 0;
